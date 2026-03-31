@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Basic Plan",
+    "description": "Perfect for beginners getting started",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "10+ templates",
+      "Basic customization",
+      "Export to PDF"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Starter Plan",
+    "description": "Great for individuals building resumes",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "50+ templates",
+      "ATS optimization",
+      "Download in PDF & DOCX"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pro Plan",
+    "description": "Advanced tools for professionals",
+    "price": 19,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "100+ templates",
+      "AI resume suggestions",
+      "Priority support"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Business Plan",
+    "description": "For teams and companies",
+    "price": 49,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Team collaboration",
+      "Custom branding",
+      "Admin dashboard"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Yearly Pro",
+    "description": "Save more with yearly billing",
+    "price": 199,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "Everything in Pro",
+      "2 months free",
+      "Premium templates"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Lifetime Plan",
+    "description": "One-time payment for lifetime access",
+    "price": 299,
+    "period": "one-time",
+    "tag": "exclusive",
+    "tagType": "new",
+    "features": [
+      "All features unlocked",
+      "Lifetime updates",
+      "Priority support"
+    ]
+  }
+]
