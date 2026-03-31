@@ -6,7 +6,8 @@
     "price": 10,
     "period": "one-time",
     "tag": "New",
-    "tagType": "new",
+    "image":"https://i.ibb.co.com/prnRFLv3/design-tool.png",
+    "tagType": "badge-success",
     "features": [
       "10+ templates",
       "Basic customization",
@@ -20,7 +21,8 @@
     "price": 29,
     "period": "monthly",
     "tag": "Popular",
-    "tagType": "popular",
+    "image":"https://i.ibb.co.com/bgBQcm29/operation.png",
+    "tagType": "badge-primary",
     "features": [
       "50+ templates",
       "ATS optimization",
@@ -34,7 +36,8 @@
     "price": 19,
     "period": "monthly",
     "tag": "Best seller",
-    "tagType": "best",
+    "image":"https://i.ibb.co.com/999w603v/portfolio.png",
+    "tagType": "badge-warning",
     "features": [
       "100+ templates",
       "AI resume suggestions",
@@ -48,7 +51,8 @@
     "price": 49,
     "period": "monthly",
     "tag": "Popular",
-    "tagType": "popular",
+    "image":"https://i.ibb.co.com/8DX3xDMT/shopping-cart.png",
+    "tagType": "badge-primary",
     "features": [
       "Team collaboration",
       "Custom branding",
@@ -62,7 +66,8 @@
     "price": 99,
     "period": "yearly",
     "tag": "Best seller",
-    "tagType": "best",
+    "image":"https://i.ibb.co.com/kgYpQw5G/social-media.png",
+    "tagType": "badge-warning",
     "features": [
       "Everything in Pro",
       "2 months free",
@@ -76,7 +81,8 @@
     "price": 29,
     "period": "one-time",
     "tag": "New",
-    "tagType": "new",
+    "image":"https://i.ibb.co.com/nqP9b7nL/writing-2327400-1.png",
+    "tagType": "badge-success",
     "features": [
       "All features unlocked",
       "Lifetime updates",
