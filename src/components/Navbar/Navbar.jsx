@@ -1,61 +1,87 @@
+import { ShoppingCart } from "lucide-react";
+
+const navItems = [
+  {
+    id: 2,
+    name: "Products",
+    path: "/products",
+    dropdown: true,
+    subItems: [
+      { id: 21, name: "All Products", path: "/products" },
+      { id: 22, name: "Popular", path: "/products/popular" },
+      { id: 23, name: "New Arrivals", path: "/products/new" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Features",
+    path: "/features",
+    dropdown: true,
+    subItems: [
+      { id: 31, name: "AI Tools", path: "/features/ai" },
+      { id: 32, name: "Automation", path: "/features/automation" },
+      { id: 33, name: "Analytics", path: "/features/analytics" },
+    ],
+  },
+  {
+    id: 4,
+    name: "Pricing",
+    path: "/pricing",
+  },
+  {
+    id: 5,
+    name: "Testimonials",
+    path: "/testimonials",
+  },
+  {
+    id: 6,
+    name: "FAQ",
+    path: "/faq",
+  },
+];
+
 const Navbar = ({cart}) => {
+  // Navigation Menu map Render
+  const Navigation = navItems.map((item) => (
+    <li key={item.id} className="group">
+      <a
+        className="font-medium transition-colors duration-300 group-hover:bg-linear-to-r group-hover:from-[#4F39F6] group-hover:to-[#9514FA] group-hover:bg-clip-text group-hover:text-transparent"
+        href={item.path}
+      >
+        {item.name}
+      </a>
+    </li>
+  ));
+
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
-        <div className="flex-1 navbar-start">
-          <a className="text-[#4F39F6] font-bold text-3xl">DigiTools</a>
-        </div>
-        <div className="navbar-center">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Products</a>
-            </li>
-            <li>
-              <a>Features</a>
-            </li>
-            <li>
-              <a>Pricing</a>
-            </li>
-            <li>
-              <a>Testimonials</a>
-            </li>
-            <li>
-              <a>FAQ</a>
-            </li>
-          </ul>
-        </div>
-        <div className="flex gap-4 navbar-end">
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle"
-            >
-              <div className="indicator">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {" "}
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />{" "}
-                </svg>
-                {cart.length>0 &&  <span className="badge badge-sm indicator-item">{cart.length}</span>}
-              </div>
-            </div>
-            <span>Login</span>
-            <button className="btn rounded-full bg-[#4F39F6] text-white">Get Started</button>
-          </div>
-        </div>
+    <nav className="containers  w-full z-50 bg-gray-100/30 backdrop-blur-sm flex items-center justify-between py-5 px-8 border-b border-[#ddd] shadow-sm">
+      {/* Logo image */}
+      <div>
+        <h2 className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent text-3xl font-semibold">DigiTools</h2>
       </div>
-    </div>
+
+      {/* Navigation Menu  */}
+      <ul className="hidden  gap-4 lg:flex">{Navigation}</ul>
+
+      {/* login Button */}
+      <div className="flex gap-4">
+        <button className="flex items-center font-semibold cursor-pointer gap-1">
+          <span className="relative">
+            {" "}
+            <span className="absolute -top-5  bg-red-500 w-6 h-6 flex items-center justify-center rounded-full text-white text-sm">
+              {cart.length}
+            </span>
+            <ShoppingCart />
+          </span>{" "}
+          Login
+        </button>
+
+        {/* Get Started Buttons */}
+        <button className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-2 px-4 rounded-full text-white text-lg capitalize cursor-pointer font-semibold">
+          Get Started
+        </button>
+      </div>
+    </nav>
   );
 };
 

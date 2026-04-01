@@ -4,7 +4,7 @@ import products from "../../assets/package.png";
 import rocket from "../../assets/rocket.png";
 const Steps = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 pb-15">
       <div className="text-center mt-12 pt-12">
         <h2 className="font-bold text-3xl">Get Started In 3 Steps</h2>
         <p className="text-[#627382]">
@@ -32,7 +32,7 @@ const Steps = () => {
         </div>
         <div className="card w-96 bg-base-100 card-lg shadow-sm">
           <div className="card-body items-center">
-            <img src={rocket} alt="" className=" border border-red-800 rounded-4xl"/>
+            <img src={rocket} alt="" className=""/>
             <h2 className="card-title">Start Creating</h2>
             <p className="text-[#627382] text-center">
               Download and start using your premium tools immediately.

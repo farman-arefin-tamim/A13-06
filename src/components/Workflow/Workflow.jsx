@@ -2,8 +2,9 @@ import React from 'react';
 
 const Workflow = () => {
     return (
-        <div className='bg-linear-to-r from-[#422ce7] to-[#4c3bd3] h-[50vh]'>
-            <div className='text-center text-white'>
+        <div className='bg-linear-to-r from-[#422ce7] to-[#4c3bd3] h-[80vh] flex justify-center items-center'>
+           <div>
+                 <div className='text-center text-white'>
                 <h3 className='font-bold text-4xl'>Ready to Transform Your Workflow?</h3>
                 <p className='text-wrap '>Join thousands of professionals who are already using Digitools to work smarter. Start your free trial today.</p>
             </div>
@@ -13,6 +14,7 @@ const Workflow = () => {
             </div>
            <div className='text-center text-white'>
                  <p>14-day free trial • No credit card required • Cancel anytime</p>
+           </div>
            </div>
         </div>
     );
