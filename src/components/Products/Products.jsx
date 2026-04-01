@@ -20,19 +20,21 @@ const Products = ({ dataPromise, cart, setCart , active, setActive}) => {
           className="tab rounded-full w-40 bg-linear-to-r from-[#422ce7] to-[#4c3bd3] text-white"
           aria-label="Products"
           defaultChecked
+          checked={active === "products"}
           onClick={()=>setActive("products")}
         />
         <input
           type="radio"
           name="my_tabs_1"
           className="tab rounded-full w-40 bg-linear-to-r from-[#422ce7] to-[#4c3bd3] text-white"
-          aria-label="Carts"
+          aria-label={`Carts (${cart.length})`}
+           checked={active === "cart"}
            onClick={()=>setActive("cart")}
         />
       </div>
       </div>
       {
-        active==="producst"? (
+        active==="products"? (
           <div className="grid grid-cols-1 md:grid-cols-3 space-y-6 mt-8">
         {getData.map((data) => {
           return (
@@ -46,7 +48,7 @@ const Products = ({ dataPromise, cart, setCart , active, setActive}) => {
         })}
       </div>
         ) : (
-          <Cart></Cart>
+          <Cart cart={cart}></Cart>
         )
       }
     </div>
