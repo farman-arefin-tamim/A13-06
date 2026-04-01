@@ -17,14 +17,14 @@ const Products = ({ dataPromise, cart, setCart, active, setActive }) => {
           <input
             type="radio"
             name="my_tabs_1"
-            className={`tab rounded-full w-40 ${active==="products"?"bg-linear-to-r from-[#4F39F6] to-[#9514FA]":""} text-white`}
+            className={`tab rounded-full w-40 ${active==="products" &&"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
             aria-label="Products"
             onClick={() => setActive("products")}
           />
           <input
             type="radio"
             name="my_tabs_1"
-            className={`tab rounded-full w-40 ${active==="cart"?"bg-linear-to-r from-[#4F39F6] to-[#9514FA]":""} text-white`}
+            className={`tab rounded-full w-40 ${active==="cart" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"} `}
             aria-label={`Carts (${cart.length})`}
             onClick={() => setActive("cart")}
           />
