@@ -5,6 +5,9 @@ import Navbar from './components/Navbar/Navbar'
 import Stat from './components/Stat/Stat'
 import Products from './components/Products/Products'
 import Steps from './components/Steps/Steps'
+import Pricing from './components/Pricing/Pricing'
+import Workflow from './components/Workflow/Workflow'
+import Footer from './components/Footer/Footer'
 
 const fetchData = async()=>{
   const res = await fetch('/data.json');
@@ -16,15 +19,19 @@ const fetchData = async()=>{
 function App() {
   const dataPromise = fetchData();
   const [cart, setCart] = useState([]);
+  const [active, setActive] = useState("products");
   return (
     <>
       <Navbar cart={cart}></Navbar>
       <Banner></Banner>
       <Stat></Stat>
       <Suspense>
-        <Products dataPromise={dataPromise} cart={cart} setCart={setCart}></Products>
+        <Products dataPromise={dataPromise} cart={cart} setCart={setCart} active={active} setActive={setActive}></Products>
       </Suspense>
       <Steps></Steps>
+      <Pricing></Pricing>
+      <Workflow></Workflow>
+      <Footer></Footer>
     </>
   )
 }
