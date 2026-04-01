@@ -2,13 +2,13 @@ import React from 'react';
 
 const Workflow = () => {
     return (
-        <div className='bg-linear-to-r from-[#422ce7] to-[#4c3bd3] h-[80vh] flex justify-center items-center'>
-           <div>
-                 <div className='text-center text-white'>
+        <div className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] h-[80vh] flex justify-center items-center'>
+           <div className='space-y-6'>
+                 <div className='text-center text-white space-y-2'>
                 <h3 className='font-bold text-4xl'>Ready to Transform Your Workflow?</h3>
                 <p className='text-wrap '>Join thousands of professionals who are already using Digitools to work smarter. Start your free trial today.</p>
             </div>
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center gap-2'>
                 <button className="btn btn-soft btn-primary rounded-full text-[#422ce7] bg-white">Explore Products</button>
                 <button className="btn btn-outline btn-primary rounded-full text-white">View Pricing</button>
             </div>

@@ -1,14 +1,21 @@
 import React from "react";
+import { IoCartOutline } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 
 const Cart = ({ cart, setCart }) => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  const handleDelete = (id) => {
+  const updatedCart = cart.filter(item => item.id !== id);
+  setCart(updatedCart);
+};
   return (
     <div>
       <div>
         <h3 className="font-bold text-xl px-8 mt-8">Your Carts</h3>
         {
-            cart.length===0?<div className="font-bold text-4xl flex justify-center items-center text-[#627382]"><h1>Your cart is empty</h1></div>
+            cart.length===0?<div className="font-bold text-4xl flex justify-center items-center text-[#627382] h-[50vh]"> 
+            <h1>Your cart is empty</h1></div>
             :<>
                 {cart.map((item) => (
           <div
@@ -26,7 +33,7 @@ const Cart = ({ cart, setCart }) => {
                 <p className="font-semibold text-[#627382]">${item.price}</p>
               </div>
             </div>
-            <MdDelete className="h-10 w-5 " />
+            <MdDelete onClick={()=>handleDelete(item.id)} className="h-10 w-5 " />
           </div>
         ))}
         <div className="text-xl font-bold px-8 mt-4 flex justify-between text-[#627382]">

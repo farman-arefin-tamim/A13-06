@@ -4,7 +4,7 @@ const Card = ({ data , cart, setCart}) => {
     
   return (
     <div className="container mx-auto">
-      <div className="card w-96 bg-base-100 shadow-sm">
+      <div className="card bg-base-100 shadow-sm">
         <div className="card-body">
           <div className="flex justify-between mb-6">
             <img src={data.image} alt="" className="w-7.5" />
@@ -37,7 +37,7 @@ const Card = ({ data , cart, setCart}) => {
             ))}
           </ul>
           <div className="mt-6">
-            <button className="btn btn-primary btn-block rounded-full bg-linear-to-r from-[#3f28ec] to-[#6756e9]" onClick={()=>setCart([...cart, data])}>
+            <button className="btn btn-primary btn-block rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]" onClick={()=>setCart([...cart, data])}>
                Buy Now
             </button>
           </div>

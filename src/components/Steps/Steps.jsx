@@ -11,7 +11,7 @@ const Steps = () => {
           Start using premium digital tools in minutes, not hours.
         </p>
       </div>
-      <div className="flex justify-around items-center mt-12">
+      <div className="flex flex-col md:flex-row justify-around items-center mt-12">
         <div className="card w-96 bg-base-100 card-lg shadow-sm">
           <div className="card-body items-center">
             <img src={account} alt="" />

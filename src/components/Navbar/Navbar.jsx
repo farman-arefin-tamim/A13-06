@@ -54,7 +54,7 @@ const Navbar = ({cart}) => {
   ));
 
   return (
-    <nav className="containers  w-full z-50 bg-gray-100/30 backdrop-blur-sm flex items-center justify-between py-5 px-8 border-b border-[#ddd] shadow-sm">
+    <nav className="containers  w-full z-50 bg-gray-100/30 backdrop-blur-sm flex items-center justify-between py-5 px-12 border-b border-[#ddd] shadow-sm">
       {/* Logo image */}
       <div>
         <h2 className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent text-3xl font-semibold">DigiTools</h2>
