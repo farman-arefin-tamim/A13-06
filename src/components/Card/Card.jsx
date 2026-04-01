@@ -1,7 +1,12 @@
 import React from "react";
+import { toast } from "react-toastify";
 
-const Card = ({ data , cart, setCart}) => {
-    
+const Card = ({ data , cart, setCart, isActive, setIsActive}) => {
+    const handleCart=()=>{
+      setCart([...cart, data]);
+      setIsActive(true);
+      toast.success("Items added to cart successfully");
+    }
   return (
     <div className="container mx-auto">
       <div className="card bg-base-100 shadow-sm">
@@ -37,9 +42,9 @@ const Card = ({ data , cart, setCart}) => {
             ))}
           </ul>
           <div className="mt-6">
-            <button className="btn btn-primary btn-block rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]" onClick={()=>setCart([...cart, data])}>
+            <button className="btn btn-primary btn-block rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]" onClick={()=>handleCart()} disabled={isActive}>
                Buy Now
-            </button>
+            </button>         
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Cart = ({ cart, setCart }) => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
@@ -8,7 +9,13 @@ const Cart = ({ cart, setCart }) => {
   const handleDelete = (id) => {
   const updatedCart = cart.filter(item => item.id !== id);
   setCart(updatedCart);
+  toast.error("Item removes from cart succesfully!");
+ 
 };
+  const proceedToCheckout=()=>{
+    setCart([]);
+    toast.success("All Items Checked Out");
+  }
   return (
     <div>
       <div>
@@ -41,7 +48,7 @@ const Cart = ({ cart, setCart }) => {
             <span>${total}</span>
         </div>
        <div className="flex items-center justify-center mt-12">
-             <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full w-full" onClick={()=>setCart([])}>Proceed To Checkout</button>
+             <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full w-full" onClick={()=>proceedToCheckout()}>Proceed To Checkout</button>
        </div>
             </>
         }
