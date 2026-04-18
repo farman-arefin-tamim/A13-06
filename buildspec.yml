@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo Installing dependencies...
+      - npm ci --legacy-peer-deps
+
+  build:
+    commands:
+      - echo Building the React app...
+      - npm run build
+  # post_build:
+  #   commands:
+  #     - aws s3 sync dist/ s3://keenkeeper --delete
+  #     - aws cloudfront create-invalidation --distribution-id E5WMGRUVCIQXX --paths "/*"
+ 
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist
+
+cache:
+  paths:
+    - node_modules/**/*
