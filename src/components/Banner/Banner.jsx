@@ -8,7 +8,7 @@ const Banner = () => {
         <div className='container mx-auto flex flex-col md:flex-row items-center justify-center gap-4 mt-12'>
             <section className='space-y-5'>
                 <div className="badge badge-soft badge-primary"><FaRegCircleDot /> New AI Powered Tools available</div>
-                <h1 className='font-bold text-6xl'>Supercharge Your<br></br>Digital Workflow</h1>
+                <h1 className='font-bold text-6xl'>Supercharge Your<br></br>Analog Workflow</h1>
                 <p className='text-[#627382] text-wrap'>Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today.Explore Products</p>
 
                <div className='flex flex-col md:flex-row gap-2'>
